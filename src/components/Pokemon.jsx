@@ -16,7 +16,7 @@ const Pokemon = ({name, obtained, url}) => {
     }, [])
 
   return (
-    <div className="h-[100px] w-[20%] flex justify-center items-center">
+    <div className="h-[100px] w-[30%] sm:w-[20%] flex justify-center items-center">
         {
             img &&
             <img className={`h-[100px] ${!obtained && 'brightness-0'}`} src={img} alt={name} />

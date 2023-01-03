@@ -18,7 +18,7 @@ const Home = () => {
           POKE-QUIZ
         </h1>
         <img className="w-[200px] animate-brightPulsing" src={pikachu} alt='foto de pikachu'/>
-        <p className="text-white font-pokehollow font-semibold mt-8 tracking-widest">
+        <p className="text-white font-pokehollow font-semibold mt-8 text-center tracking-widest">
           I spy with my little eye wich pokemon is behind the shadow
         </p>
         <div className="flex justify-center items-center gap-10 mt-8">

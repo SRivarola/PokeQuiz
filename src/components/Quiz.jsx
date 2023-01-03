@@ -5,7 +5,7 @@ import pokeBall from '../assets/Pokebola.png'
 
 const Quiz = () => {
 
-    const { restOfList, updateLists, myPokeList, pokeFullList } = useContext(PokeContext)
+    const { restOfList, updateList, myPokeList, pokeFullList } = useContext(PokeContext)
     const [pokemon, setPokemon] = useState()
     const [options, setOptions] = useState([])
     const [isCorrect, setIsCorrect] = useState('')
@@ -23,7 +23,7 @@ const Quiz = () => {
             setTimeout(() => {
                 setCorrect(false)
             }, 1500);
-            updateLists(name)
+            updateList(name)
         } else {
             setIsCorrect(`${name}false`)
             setCorrect(false)
@@ -93,7 +93,7 @@ const Quiz = () => {
                     }
                 </div>
             </div>
-            <div className="flex flex-col gap-5 items-center">
+            <div className="hidden sm:flex flex-col gap-5 items-center">
                 <img className='h-[100px]' src={pokeBall} alt='pokeball' />
                 <p className='pl-3 text-amarillo text-xl tracking-widest' style={{textShadow: "2px 2px black"}}>{myPokeList.length} figures of {pokeFullList.length}</p>
                 <p className='pl-3 text-amarillo text-xl tracking-widest' style={{textShadow: "2px 2px black"}}>in your album</p>

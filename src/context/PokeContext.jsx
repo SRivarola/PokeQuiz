@@ -10,7 +10,7 @@ const PokeContextProvider = ({children}) => {
 
     const url = 'https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0'
     
-    const updateLists = (name) => {
+    const updateList = (name) => {
         const filteredList = restOfList.filter(item => item.name !== name)
         const findedItem = pokeFullList.find(item => item.name === name)
         setTimeout(() => {
@@ -35,7 +35,7 @@ const PokeContextProvider = ({children}) => {
             pokeFullList,
             restOfList,
             setRestOfList,
-            updateLists,
+            updateList,
             myPokeList,
         }}>
             {children}

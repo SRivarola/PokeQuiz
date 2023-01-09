@@ -22,7 +22,7 @@ const Quiz = () => {
             setCorrect(true)
             setTimeout(() => {
                 setCorrect(false)
-            }, 1500);
+            }, 2000);
             updateList(name)
         } else {
             setIsCorrect(`${name}false`)
@@ -50,9 +50,9 @@ const Quiz = () => {
                 random4 = getRandomInt(1,maxNumber)
             } while (random3 === random4 || random2 === random4 || random1 === random4);
             const pokeData1 = restOfList[random1]
-            const pokeData2 = restOfList[random2]
-            const pokeData3 = restOfList[random3]
-            const pokeData4 = restOfList[random4]
+            const pokeData2 = pokeFullList[random2]
+            const pokeData3 = pokeFullList[random3]
+            const pokeData4 = pokeFullList[random4]
             const pokeArray = [pokeData1, pokeData2, pokeData3, pokeData4]
             const sortedArray = pokeArray.sort((a, b) => a.name.localeCompare(b.name))
             setOptions(sortedArray)
@@ -73,7 +73,7 @@ const Quiz = () => {
     return (
     <div className="relative w-screen h-screen bg-secondary flex flex-col jus">
         <PokeCounter />
-        <div className="flex w-full h-full justify-evenly items-center">
+        <div className="flex w-full h-full justify-center sm:justify-evenly items-center">
             <div className="flex flex-col items-center">
                 <div className="relative h-[200px]">
                     {

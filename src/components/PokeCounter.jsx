@@ -6,7 +6,7 @@ import CustomLink from './CustomLink'
 const PokeCounter = () => {
 
     const { myPokeList } = useContext(PokeContext)
-
+    
   return (
     <div className='px-10 flex justify-between items-center w-screen h-[50px]' >
         <CustomLink url='/' text='HOME' />

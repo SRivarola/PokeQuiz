@@ -18,7 +18,7 @@ const PokeContextProvider = ({children}) => {
             localStorage.setItem('restOfList', JSON.stringify(filteredList))
             setMyPokeList([...myPokeList, findedItem])
             localStorage.setItem('myPokeList', JSON.stringify([...myPokeList, findedItem]))
-        }, 1500);
+        }, 2500);
     }
 
     useEffect(() => {
